@@ -1,0 +1,259 @@
+// Main of all the pages
+@use "_index.scss";
+
+@use "productos.scss";
+
+@use "puntos_de_venta.scss";
+
+@use "nosotros.scss";
+
+@use "contacto.scss";
+
+/* #=== RESET ===# */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+// Bootstrap-Reset
+ul {
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  &:visited {
+    color: black;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+/* #=== HEADER  ===# */
+
+header {
+  height: 9rem;
+}
+
+.hidden-nav {
+  display: none;
+}
+
+nav {
+  height: inherit;
+}
+
+nav *:not(a:not(:has(img))):not(.container-fluid):not(.container-fluid *):not(.navbar-hamburguer) {
+  height: inherit;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  li {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    a:hover {
+      color: #f68634;
+      transition: 0.4s;
+    }
+  }
+  .mobile-hamburguer {
+    display: none;
+  }
+}
+
+.navbar-hamburguer {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  // background-image: url("../img/menu-organge.png");
+  background-position: 100%;
+  background-size: cover;
+  border: none;
+}
+
+.offcanvas {
+  height: 100%;
+  max-width: 50%;
+}
+
+.offcanvas-end {
+  width: 10rem;
+}
+
+.navbar-nav {
+  text-align: center;
+  .nav-item {
+    margin-bottom: 4rem;
+    a:hover {
+      transition: 0.4;
+      color: #f68634;
+    }
+  }
+}
+
+.container-fluid {
+  display: none;
+}
+
+.title-orange {
+  width: 100%;
+  text-align: center;
+  background-color: #f98530;
+  color: white;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.5rem;
+  word-spacing: 12rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.hidden-title{
+display: block;
+}
+
+/* #=== FOOTER ===# */
+
+footer {
+  height: 5rem;
+  width: 80%;
+  display: flex;
+  margin: auto;
+  * {
+    height: inherit;
+  }
+  & > section {
+    display: flex;
+    width: 50%;
+  }
+}
+
+.footer__ul {
+  display: flex;
+  .li--left {
+    a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .li--right {
+    display: flex;
+    align-items: center;
+    &:has(span) {
+      align-items: center;
+      margin-right: 0.5rem;
+      height: auto;
+    }
+  }
+}
+
+.footer__logo--left {
+  height: 3.5rem;
+}
+
+.footer__logo--right {
+  height: 2rem;
+}
+
+.ig {
+  margin-left: 1rem;
+}
+
+.footer--right {
+  justify-content: flex-end;
+}
+
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 6rem;
+  }
+  .nav-ul {
+    width: 100%;
+    justify-content: space-evenly;
+    margin: none;
+  }
+  main {
+    width: 90%;
+  }
+  footer {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 5rem;
+  }
+  .nav-ul {
+    justify-content: space-between;
+    padding: 0 1rem;
+    width: 100%;
+    margin: none;
+    li {
+      font-size: 1rem;
+    }
+    .link-title {
+      display: none;
+    }
+    .mobile-hamburguer {
+      display: flex;
+      align-items: center;
+    }
+  }
+  main {
+    width: 100%;
+  }
+
+  .title-mobile-container {
+    display: block;
+    h1 {
+      width: 100%;
+      text-align: center;
+      background-color: #f98530;
+      color: white;
+      // border-radius: 0 0 10px 10px;
+      margin: 0;
+      font-weight: 500;
+      font-size: 1.5rem;
+      word-spacing: 12rem;
+    }
+  }
+
+  // This we use in puntos_de_venta because the word-spacing is too much unless
+  .ws-3r h1 {
+    word-spacing: 3rem;
+  }
+
+  footer {
+    width: 100%;
+  }
+  .container-fluid {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    height: 3rem;
+  }
+  .navbar-hamburguer {
+    img {
+      transform: scale(0.8);
+    }
+  }
+}

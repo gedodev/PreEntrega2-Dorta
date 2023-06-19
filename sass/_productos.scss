@@ -1,0 +1,102 @@
+.product {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: 20rem;
+    overflow: hidden;
+    margin-bottom: 15px;
+    margin-top: 3rem;
+    section {
+        width: 50%;
+    }
+    .product__img--picture {
+        .img-container {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        }
+    }
+    .product__img--name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 3rem;
+        background-color: #f98530;
+        color: white;
+        letter-spacing: 0.21rem;
+        border-radius: 2rem 0 0 2rem;
+    }
+}
+
+.product--chivitos {
+  .img-container {
+    background-image: url("../img/chivi.jpg");
+    background-position-y: 60%; 
+  }
+}
+.product--choris {
+  .img-container {
+    background-image: url("../img/chori.jpg");
+    background-position-y: 56%;
+  }
+}
+.product--otro {
+  .img-container {
+    background-image: url("../img/asado.jpg");
+    background-position-y: 75% ;
+  }
+}
+
+// We do not want it in the desktop version
+.name-container-mobile{
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+
+  .product{
+    margin: 0;
+    .product__img--name{
+      display: none;
+    }
+    .product__img--picture{
+      width: 100%;
+    }
+  }
+
+  // Flip effect
+  .product{
+    position: relative;
+    .product__img--picture {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: all 2s ease;
+      &:hover{
+        transform: rotateY(180deg);
+      }
+      .img-container{
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      .name-container-mobile{
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #01a75b;
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
