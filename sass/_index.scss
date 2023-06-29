@@ -8,7 +8,7 @@ main {
 .index-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 4rem 34rem;
+  grid-template-rows: 2rem 34rem;
   grid-template-areas: 
     "header header"
     "carousel1 carousel2";

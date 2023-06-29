@@ -184,14 +184,19 @@ body > footer {
   }
   .nav-ul {
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: none;
   }
+
+  .title-orange{
+    border-radius: 0 0 10rem 10rem;
+  }
+  
   main {
-    width: 90%;
+    width: 100%;
   }
   footer {
-    width: 90%;
+    width: 100%;
   }
 }
 
