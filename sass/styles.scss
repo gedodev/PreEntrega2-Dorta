@@ -114,7 +114,7 @@ nav *:not(a:not(:has(img))):not(.container-fluid):not(.container-fluid *):not(.n
   font-weight: 500;
   font-size: 2.5rem;
   word-spacing: 12rem;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 10rem 10rem;
 }
 
 .hidden-title{
@@ -186,10 +186,6 @@ body > footer {
     width: 100%;
     justify-content: space-around;
     margin: none;
-  }
-
-  .title-orange{
-    border-radius: 0 0 10rem 10rem;
   }
   
   main {
